@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define LENGTH 45
+#define SIZE 133
+
+// Defining slingle linked list structure
+typedef struct sllist
+{
+    char word[LENGTH];
+    struct sllist *next;
+}
+sllnode;
+
+
+// Functions declarations
+unsigned long hash(char *str);
+
+
+int main (void)
+{
+/*    // check for correct number of arguments
+    if (argc != 2)
+    {
+        printf("Usage: speller dictionary")
+        return 1;
+    }*/
+    
+    sllnode *hashtable[SIZE];
+    for(int i = 0; i < SIZE; i++)
+    {
+        hashtable[i] = malloc(sizeof(sllnode));
+        if (hashtable[i]==NULL)
+        {
+            printf("could not alocate memory for the hashtable\n");
+            return 1;
+        }
+    }
+    
+    // Open dictionary file
+    char *dictionary = "dictionaries/small";
+    FILE *inpt = fopen(dictionary, "r");
+    if (inpt == NULL)
+    {
+        fprintf(stderr, "Could not open %s.\n", dictionary);
+        return 2;
+    }
+    
+    // Variable to store a word
+    char word[LENGTH + 1];
+    
+    // Populate the hashtable with random words
+    while (fscanf(inpt, "%s", word) != EOF)  // iterate through file
+    {
+
+       sllnode *new_node = malloc(sizeof(sllnode));
+        if (new_node == NULL)
+        {
+            printf("Could not alloc memory for new node\n");
+            break;
+        }
+        // insert the word into the new node
+        strcpy(new_node->word, word);
+        
+        // get the word key to input into the hashtable
+        int key = hash(&word[0]);
+        // Put the word into its key bucket in the hashtable
+        //printf("hashcode for %s is %i\n", word, key); // hash key generation working
+        //printf("new node word is %s, %i\n", new_node->word, key);
+        new_node->next = hashtable[key];
+        hashtable[key] = new_node;
+    }
+    
+    // print hashtable
+    printf("printing hashtable....\n");
+    for (int i = 0; i < SIZE; i++)
+    {
+        sllnode *trav = hashtable[i];
+        while(trav->next != NULL)
+        {
+            printf("%i -> %s\n", i, trav->word);
+            trav = trav->next;
+        } 
+    }
+}
+
+
+// Hash function
+unsigned long hash(char *str)
+    {
+        unsigned long hash = 5381;
+        int c;
+
+        while ((c = *str++))
+            hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+
+        return hash % SIZE;
+    }
+
+

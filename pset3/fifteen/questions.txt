@@ -1,0 +1,4 @@
+0. Game of Fifteen allows equal dimensions from 3x3 up tp 9x9, defined as DIM_MIN and DIM_MAX. 
+1. The board is represented as a matrix/2D array.
+2. greet()
+3. init, draw, move, won

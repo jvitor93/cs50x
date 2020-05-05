@@ -1,0 +1,25 @@
+1.  it is a header file in C that contains several typedefinitions 
+especifically for integers
+
+2.  to have the computer to use just enough amount of memory as needed for each int
+
+3.  8, 32, 32, 16;
+
+4.  0x42 0x4D
+
+5.  bfSize contains the size of the file(including header, padding etc) 
+    biSize cointains only the size of the image (pixels)
+    
+6.  it means that the file data is read from top to botton
+
+7.  biBitCount
+
+8.  fopen returns NULL if it cannot find the specific file
+
+9.  because we want to read 1 block of RGBTRIPLE, BITMAPINFO, BITMAPFILE.. at time
+
+10. 0
+
+11. fseek set the pointer of a file to a position
+
+12. used to set fseek pointer change from the current position
