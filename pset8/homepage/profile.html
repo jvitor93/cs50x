@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>My Profile</title>
+    <script src="mscript.js"></script>
+</head>
+
+<body>
+    <figure>
+        <img id="topim" src="pics/top.jpg" alt="Profile top picture">
+    </figure>
+
+    <div class="content container-flid">
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link active" href="profile.html">Profile</a>
+            <a class="nav-item nav-link" href="skill.html">Qualifications</a>
+            <a class="nav-item nav-link" href="cats.html">About Cats</a>
+        </nav>
+    
+        <h1>History</h1>
+        <h4>Early age</h4>
+        <p>hello, homepage</p>
+        <h4>High School</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consectetur minus non repellendus! Corporis dolores fuga maiores atque blanditiis deserunt sint aliquid modi, minus rerum libero rem quisquam beatae? Totam?</p>
+        <h4>Graduation</h4>
+            <div class="card" style="width: 40rem; float: right;">
+                <div class="card-body"></div>
+                <img class="card-img-top inphoto" src="pics/chemeng.png" alt="My pic">
+                <p class="card-text imgtxt">Chemical process diagram</p>
+            </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem ipsum iure officiis laboriosam aliquid praesentium. Doloribus quae, tenetur architecto, voluptatibus nisi beatae quos repellat distinctio numquam nihil quidem sint.
+            Chemical engineering is a branch of engineering that uses principles of chemistry, physics, mathematics,
+            biology, and economics to efficiently use, produce, design, transport and transform energy and materials.
+            The work of chemical engineers can range from the utilisation of nano-technology and nano-materials in the
+            laboratory to large-scale industrial processes that convert chemicals, raw materials, living cells,
+            microorganisms, and energy into useful forms and products.
+
+            Chemical engineers are involved in many aspects of plant design and operation, including safety and hazard
+            assessments, process design and analysis, modeling, control engineering, chemical reaction engineering,
+            nuclear engineering, biological engineering, construction specification, and operating instructions.
+
+            Chemical engineers typically hold a degree in Chemical Engineering or Process Engineering. Practising
+            engineers may have professional certification and be accredited members of a professional body. Such bodies
+            include the Institution of Chemical Engineers (IChemE) or the American Institute of Chemical Engineers
+            (AIChE). A degree in chemical engineering is directly linked with all of the other engineering disciplines,
+            to various extents.
+        </p>
+        <h4>USP</h4>
+        <p>he University of São Paulo (Portuguese: Universidade de São Paulo, USP) is a public university in the Brazilian state of São Paulo. It is the largest Brazilian public university and the country's most
+        prestigious educational institution,[3][4] the best university in Ibero-America,[5][6][7] and holds a high
+        reputation among world universities, being ranked 100 worldwide in reputation by the Times Higher Education
+        World University Rankings.[8][9][10] USP is involved in teaching, research and university extension in all
+        areas of knowledge, offering a broad range of courses.
+
+        The university was founded in 1934, regrouping already existing schools in the state of São Paulo, such as
+        the Faculdade de Direito do Largo de São Francisco (Faculty of Law), the Escola Politécnica (Engineering
+        School) and the Escola Superior de Agricultura Luiz de Queiroz (College of Agriculture). The university's
+        foundation is marked by the creation in 1934 of the Faculdade de Filosofia, Ciências e Letras (Faculty of
+        Philosophy, Sciences and Letters, 1934-1968), and has subsequently created new departments, becoming one of
+        the largest institutions of higher education in Latin America, with approximately 90,000 enrolled students.
+        Currently, it has eleven campuses, four of them in the city of São Paulo.[11] The remaining campuses are in
+        the cities of Bauru, Lorena, Piracicaba, Pirassununga, Ribeirão Preto and two in São Carlos.
+
+        Several students from the University of São Paulo have achieved important positions in Brazilian society. It
+        was the alma mater of twelve Brazilian presidents. USP was ranked 19th worldwide in a rank based on the
+        number of alumni who became CEOs in the world's 500 largest companies,[12] and also classed in the top 100
+        worldwide in the Global Employability University Ranking.[13] In terms of research, USP is Brazil's largest
+        research institution, producing more than 25% of the scientific papers published by Brazilian researchers in
+        high quality conferences and journals.[14] In 2015, out of 36 subjects, the QS World University Rankings
+        ranked USP in the top 50 in eight subjects (including Architecture, Dentistry, Civil Engineering,
+        Agriculture/Forestry, Art/Design and Veterinary Science) and in the top 51-100th position in 21 more
+        subjects (including Computer Science, Mechanical, Electrical and Chemical Engineering, Modern Languages,
+        Geography, Physics, Chemistry and Mathematics). Over the years, QS also consistently ranked USP among the
+        top 5 universities in the Latin world. </p>
+        <h4>Computer Science</h4>
+        <p>
+            Computer programming is the process of designing and building an executable computer program to accomplish a
+            specific computing result. Programming involves tasks such as: analysis, generating algorithms, profiling
+            algorithms' accuracy and resource consumption, and the implementation of algorithms in a chosen programming
+            language (commonly referred to as coding).[1][2] The source code of a program is written in one or more
+            languages that are intelligible to programmers, rather than machine code, which is directly executed by the
+            central processing unit. The purpose of programming is to find a sequence of instructions that will automate
+            the performance of a task (which can be as complex as an operating system) on a computer, often for solving
+            a given problem. The process of programming thus often requires expertise in several different subjects,
+            including knowledge of the application domain, specialized algorithms, and formal logic.
+
+            Tasks accompanying and related to programming include: testing, debugging, source code maintenance,
+            implementation of build systems, and management of derived artifacts, such as the machine code of computer
+            programs. These might be considered part of the programming process, but often the term software development
+            is used for this larger process with the term programming, implementation, or coding reserved for the actual
+            writing of code. Software engineering combines engineering techniques with software development practices.
+            Reverse engineering is the opposite process. A hacker is any skilled computer expert that uses their
+            technical knowledge to overcome a problem, but it can also mean a security hacker in common language.
+        </p>
+        <div class="card" style="float: right;">
+            <h4>Contact me</h4>
+            <form name="myForm" onsubmit="return validateForm()">
+                <input id="fname" type="text">
+                <label>Full Name</label>
+                <p></p>
+                <input id="femail" type="text">
+                <label>Email addres</label>
+                <p></p>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
